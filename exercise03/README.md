@@ -21,4 +21,4 @@
 
 In this exercise you will flesh out the logic in `exercise03.py` to ensure that all tests in `test_exercise03.py` pass.
 
-If you run into trouble getting tests to pass, post a pull request with failing tests so that we can collaborate on a sloution. you can always update an open PR by making another commit. Please mark you PR's that are asking for help with the label 'Help' on github.
+If you run into trouble getting tests to pass, post a pull request with failing tests so that we can collaborate on a solution. You can always update an open PR by making another commit. Please mark you PR's that are asking for help with the label 'Help' on github.
