@@ -38,9 +38,9 @@ class Test_exercise03(unittest.TestCase):
         self.assertEqual(nw, 11)
 
     def test_longest_field_in_line(self):
-        line_2 = get_line(self.fname, 2)
-        longest = longest_field_in_line(line_2)
+        line_0 = get_line(self.fname, 0)
+        longest = longest_field_in_line(line_0)
         self.assertEqual(longest, 'airport_id')
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
