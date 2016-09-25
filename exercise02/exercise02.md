@@ -1,4 +1,4 @@
-## Instructions
+# Instructions
 
 This exercise uses the airport data in `data.csv`. To complete your assignment submit one text file that lists the shell commands you used to answer the following questions.
 
@@ -15,10 +15,10 @@ This exercise uses the airport data in `data.csv`. To complete your assignment s
 Quan Zhou
 Assignment 1 for GIS321
 
+Robert Hadsell Update
 
-Quan@QuanZhou MINGW64 ~/Documents
-$ grep -v 'airport_id' data.csv |cut -d , -f 4-4 | sort | uniq | wc -l
-245
+1. $ sort -t, -k4,4 -u data.csv | wc -l
+This solution resulted in 245 lines as well.
 
 Quan@QuanZhou MINGW64 ~/Documents
 $ grep -v 'airport_id' data.csv |cut -d , -f 3-4 | sort | uniq | wc -l
