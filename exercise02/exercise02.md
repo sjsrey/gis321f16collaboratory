@@ -20,6 +20,8 @@ Quan@QuanZhou MINGW64 ~/Documents
 $ grep -v 'airport_id' data.csv |cut -d , -f 4-4 | sort | uniq | wc -l
 245
 
+I used, tail -n +2 data.csv, to output all lines starting at line 2. 
+
 Quan@QuanZhou MINGW64 ~/Documents
 $ grep -v 'airport_id' data.csv |cut -d , -f 3-4 | sort | uniq | wc -l
 6204 # this is my update code. Because there are many different cities in different countries share the same name.
