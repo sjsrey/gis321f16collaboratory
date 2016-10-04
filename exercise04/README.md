@@ -1,6 +1,6 @@
 # Exercise 04: Geospatial Data Munging with Python
 
-**GIS 321: Principles of Programming for GIScience**
+**GIS 321: Principles of Programming for GIScience**  
 **Instructor: Dr. Sergio Rey**
 
 ![airports](figures/airportosm.png  "Aiports and Open Street Map Layer")
