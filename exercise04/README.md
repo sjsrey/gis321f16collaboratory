@@ -18,7 +18,7 @@ You will be working on the [airports.csv](airports.csv) dataset we introduced in
 
 Submit your finshed, and fully commented, Jupyter notebook as a pull request to the collaboratory repository on GitHub.
 
-*Hints:* You should revisit the lecture notebooks on [dictionaries][dict] and [contolled execution][cond] for ideas on how to implement your solutoins.
+*Hints:* You should revisit the lecture notebooks on [dictionaries][dict] and [controlled execution][cond] for ideas on how to implement your solutoins.
 
 
 [e2]: https://github.com/sjsrey/gis321f16collaboratory/blob/master/exercise02/exercise02.md
