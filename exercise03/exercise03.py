@@ -38,7 +38,7 @@ def get_line(file_name, line_number):
     """
 
     lines = lines_in_file(file_name)
-    return lines[0]
+    return lines[line_number]
 
 def fields_in_line(line, delim=","):
     """
