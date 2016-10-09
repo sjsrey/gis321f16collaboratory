@@ -40,7 +40,7 @@ class Test_EX03(unittest.TestCase):
         This will fail as we are off somehow
         """
         s_len = len(self.string.split())
-        self.assertEqual(s_len, 5)
+        self.assertEqual(s_len, 4)
 
     def test_false(self):
         """
@@ -60,7 +60,7 @@ class Test_EX03(unittest.TestCase):
         i = float(i)
         self.assertTrue(isinstance(i, float))
         i = str(i)
-        self.assertTrue(isinstance(i, float))
+        self.assertTrue(isinstance(i, str))
 
     def test_list_len(self):
         """
