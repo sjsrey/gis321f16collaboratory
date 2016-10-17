@@ -38,9 +38,10 @@ def get_line(file_name, line_number):
     """
 
     lines = lines_in_file(file_name)
-    return lines[0]
+    return lines[line_number]
 
-def fields_in_line(line, delim=","):
+def fields_in_line (line, delim = ","):
+
     """
     Get the fields in a line delimited by delim
 
@@ -58,6 +59,7 @@ def fields_in_line(line, delim=","):
     """
 
     fields = line.strip().split(delim)
+    return fields 
 
 def n_fields_in_line(line):
     """
@@ -73,9 +75,10 @@ def n_fields_in_line(line):
     nf: int
         The number of fields in the string
     """
-    pass
+    nf = len(line.strip().split(","))
+    return nf
 
-def longest_field_in_line(line):
+def longest_field_in_line(line, delim = ","):
     """
     Find the longest field in a line
 
@@ -91,4 +94,12 @@ def longest_field_in_line(line):
            The longest field in the delimted line
 
     """
-    pass
+    
+    fields = fields_in_line(line, delim)
+    maxlen = 0
+    maxlenfield = ""
+    for field in fields:
+    	if (len(field) > maxlen):
+		maxlen = len(field)
+		maxlenfield = field
+    return maxlenfield
