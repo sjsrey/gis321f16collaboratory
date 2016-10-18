@@ -3,7 +3,7 @@
 **GIS 321: Principles of Programming for GIScience**  
 **Instructor: Dr. Sergio Rey**
 
-![airports](/home/serge/Dropbox/g/GIS321/F16/collaboratory/exercise04/figures/airportosm.png  "Aiports and Open Street Map Layer")
+![airports](figures/airportosm.png  "Aiports and Open Street Map Layer")
 
 In this exercise you will apply some of the Python core data types, control structures and file operations we have explored in class.
 
