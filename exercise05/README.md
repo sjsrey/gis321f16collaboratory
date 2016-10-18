@@ -3,7 +3,7 @@
 **GIS 321: Principles of Programming for GIScience**  
 **Instructor: Dr. Sergio Rey**
 
-![airports](/home/serge/Dropbox/g/GIS321/F16/collaboratory/exercise04/figures/airportosm.png  "Aiports and Open Street Map Layer")
+![airports](figures/airportosm.png  "Aiports and Open Street Map Layer")
 
 In this exercise you will extend our points module to include distance based functions to carry out some analysis of the point pattern distribution.
 
