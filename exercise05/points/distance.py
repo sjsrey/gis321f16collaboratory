@@ -126,11 +126,15 @@ def get_neighbor_list(header, data, neighbor_function=nearest_airport, dist_func
           list of lists, where the elements of each sub-list correspond to the 
           columns specified by header.
     neighbor_function: function
-                       A function that 
+                       A function that takes a data store, row index, and distance
+                       function, and returns the row index and distance (or possibly
+                       some other value) of a second airport.
+    dist_function: function
+                   The distance function to be passed to neighbor_function
     Returns:
-    distance: numeric
-              Distance between the two points.  Units are whatever the radius 
-              was passed as if it was explicitly specified (default is degrees).
+    neighbor_list: list of tuples
+                   Contains one entry for each row in the data store, with the format
+                   (row_airport_id, other_airport_id, distance).
     """
     
     # Make coordinate list
