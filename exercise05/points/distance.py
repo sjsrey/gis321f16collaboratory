@@ -19,8 +19,14 @@ def euclidean_distance(point1, point2):
 
 
 def haversine_distance(point1, point2):
-    lat1, lon1 = point1
-    lat2, lon2 = point2
+    # Unit: Km
+    Lat1, Lon1 = point1
+    Lat2, Lon2 = point2
+    lat1 = math.radians(Lat1)
+    lat2 = math.radians(Lat2)
+    lon1 = math.radians(Lon1)
+    lon2 = math.radians(Lon2)
+    
     dlat = lat1 - lat2
     dlon = lon1 - lon2
     p1 = (math.sin(dlat/2))**2
@@ -103,16 +109,6 @@ def nearestD_haversine_distance(DataName):
         for idY, j in enumerate(Cors):
             I = list(i)
             J = list(j)
-            if abs(i[1]-j[1])>180:
-                if i[1]>90:
-                    I[1] = 180 - i[1]
-                if i[1]<-90:
-                    I[1] = -180 - i[1]
-                if j[1]>90:
-                    J[1] = 180 - j[1]
-                if j[1]<-90:
-                    J[1] = -180 - j[1]
-                
             dis = haversine_distance(I,J)
             if dis < ND and dis > 0:
                 ND = dis
