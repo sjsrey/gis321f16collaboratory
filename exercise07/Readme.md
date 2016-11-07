@@ -1,7 +1,10 @@
 # Exercise 7: Discrete Markov Chains
 
 ![2016 Electoral Colleage](ec.png)
-https://upload.wikimedia.org/wikipedia/commons/e/ec/ElectoralCollege2016.svg
+(Source: https://upload.wikimedia.org/wikipedia/commons/e/ec/ElectoralCollege2016.svg)
+
+
+## Instructions
 
 Required Reading: Explore the implementation of [Discrete Markov Chains using NumPy](http://www.scipy-lectures.org/intro/numpy/exercises.html#array-manipulations).
 
