@@ -3,6 +3,7 @@ D=0
 R=1
 
 # Data:
+# From https://en.wikipedia.org/wiki/List_of_United_States_presidential_election_results_by_state
 state_history = [
 [R,D,R,R,R,R,R,R,R,R,R],
 [R,R,R,R,R,R,R,R,R,R,R],
@@ -109,3 +110,7 @@ state_names = [
 "West Virginia",
 "Wisconsin",
 "Wyoming"]
+
+# Same order as state_names.
+# Data from 2012 column of https://en.wikipedia.org/wiki/Electoral_College_(United_States)#Chronological_table
+state_electors = [9, 3, 11, 6, 5, 9, 7, 3, 3, 29, 16, 4, 4, 20, 11, 6, 6, 8, 8, 4, 10, 11, 16, 10, 6, 10, 3, 5, 6, 4, 14, 5, 29, 15, 3, 18, 7, 7, 20, 4, 9, 3, 11, 38, 6, 3, 13, 12, 5, 10, 3]
