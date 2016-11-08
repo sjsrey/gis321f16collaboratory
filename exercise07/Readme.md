@@ -8,6 +8,8 @@
 
 Required Reading: Explore the implementation of [Discrete Markov Chains using NumPy](http://www.scipy-lectures.org/intro/numpy/exercises.html#array-manipulations).
 
+Optional Reading: [PySAL Markov Chain Implementation](http://pysal.readthedocs.io/en/latest/users/tutorials/dynamics.html#markov-based-methods)
+
 Using the data for [Presidential Elections from 1972-2012](https://en.wikipedia.org/wiki/List_of_United_States_presidential_election_results_by_state) complete the following tasks:
 
 1. Estimate a two-state discrete Markov chain (with the states being Democrat and Republican).
