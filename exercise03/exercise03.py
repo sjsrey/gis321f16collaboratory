@@ -19,7 +19,7 @@ def lines_in_file(file_name):
     -------
     lines: list
     """
-    with open(file_name) as f:
+    with open(file_name, encoding = "utf8") as f:
         lines = f.readlines()
     return lines
 
@@ -58,6 +58,7 @@ def fields_in_line(line, delim=","):
     """
 
     fields = line.strip().split(delim)
+	return fields
 
 def n_fields_in_line(line):
     """
@@ -73,7 +74,8 @@ def n_fields_in_line(line):
     nf: int
         The number of fields in the string
     """
-    pass
+    nf  = len(line.strip().split(","))
+    return nf
 
 def longest_field_in_line(line):
     """
@@ -91,4 +93,12 @@ def longest_field_in_line(line):
            The longest field in the delimted line
 
     """
-    pass
+    L = []
+    D = {}
+    F = line.strip().split(",")
+    for i in range(0,len(F)):
+        L.append(len(F[i]))
+        D[str(L[i])] = i
+    field = F[D[str(max(L))]]
+    
+    return(field)
