@@ -1,61 +1,62 @@
+import numpy as np
 
 D=0
 R=1
 
 # Data:
 # From https://en.wikipedia.org/wiki/List_of_United_States_presidential_election_results_by_state
-state_history = [
-[R,D,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,R,R,D,R,R,R,R],
-[R,D,R,R,R,D,D,R,R,R,R],
-[R,R,R,R,R,D,D,D,D,D,D],
-[R,R,R,R,R,D,R,R,R,D,D],
-[R,R,R,R,R,D,D,D,D,D,D],
-[R,D,R,R,R,D,D,D,D,D,D],
-[D,D,D,D,D,D,D,D,D,D,D],
-[R,D,R,R,R,R,D,R,R,D,D],
-[R,D,D,R,R,D,R,R,R,R,R],
-[R,D,D,R,D,D,D,D,D,D,D],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,R,D,D,D,D,D,D],
-[R,R,R,R,R,R,R,R,R,D,R],
-[R,R,R,R,D,D,D,D,R,D,D],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,D,R,R,R,D,D,R,R,R,R],
-[R,D,R,R,R,D,D,R,R,R,R],
-[R,R,R,R,R,D,D,D,D,D,D],
-[R,D,D,R,R,D,D,D,D,D,D],
-[D,D,R,R,D,D,D,D,D,D,D],
-[R,R,R,R,R,D,D,D,D,D,D],
-[R,D,D,D,D,D,D,D,D,D,D],
-[R,D,R,R,R,R,R,R,R,R,R],
-[R,D,R,R,R,D,D,R,R,R,R],
-[R,R,R,R,R,D,R,R,R,R,R],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,R,D,D,R,R,D,D],
-[R,R,R,R,R,D,D,R,D,D,D],
-[R,R,R,R,R,D,D,D,D,D,D],
-[R,R,R,R,R,D,D,D,R,D,D],
-[R,D,R,R,D,D,D,D,D,D,D],
-[R,D,R,R,R,R,R,R,R,D,R],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,D,R,R,R,D,D,R,R,D,D],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,D,D,D,D,D,D,D],
-[R,D,R,R,R,D,D,D,D,D,D],
-[R,D,D,R,D,D,D,D,D,D,D],
-[R,D,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,D,R,R,R,D,D,R,R,R,R],
-[R,D,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,R,R,R,R,R,R,R],
-[R,R,R,R,R,D,D,D,D,D,D],
-[R,R,R,R,R,R,R,R,R,D,D],
-[R,R,R,R,D,D,D,D,D,D,D],
-[R,D,D,R,D,D,D,R,R,R,R],
-[R,D,R,R,D,D,D,D,D,D,D],
-[R,R,R,R,R,R,R,R,R,R,R]]
+state_history_2016 = np.array([
+[R,D,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,R,R,D,R,R,R,R,R],
+[R,D,R,R,R,D,D,R,R,R,R,R],
+[R,R,R,R,R,D,D,D,D,D,D,D],
+[R,R,R,R,R,D,R,R,R,D,D,D],
+[R,R,R,R,R,D,D,D,D,D,D,D],
+[R,D,R,R,R,D,D,D,D,D,D,D],
+[D,D,D,D,D,D,D,D,D,D,D,D],
+[R,D,R,R,R,R,D,R,R,D,D,R],
+[R,D,D,R,R,D,R,R,R,R,R,R],
+[R,D,D,R,D,D,D,D,D,D,D,D],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,R,D,D,D,D,D,D,D],
+[R,R,R,R,R,R,R,R,R,D,R,R],
+[R,R,R,R,D,D,D,D,R,D,D,R],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,D,R,R,R,D,D,R,R,R,R,R],
+[R,D,R,R,R,D,D,R,R,R,R,R],
+[R,R,R,R,R,D,D,D,D,D,D,D],
+[R,D,D,R,R,D,D,D,D,D,D,D],
+[D,D,R,R,D,D,D,D,D,D,D,D],
+[R,R,R,R,R,D,D,D,D,D,D,R],
+[R,D,D,D,D,D,D,D,D,D,D,D],
+[R,D,R,R,R,R,R,R,R,R,R,R],
+[R,D,R,R,R,D,D,R,R,R,R,R],
+[R,R,R,R,R,D,R,R,R,R,R,R],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,R,D,D,R,R,D,D,D],
+[R,R,R,R,R,D,D,R,D,D,D,D],
+[R,R,R,R,R,D,D,D,D,D,D,D],
+[R,R,R,R,R,D,D,D,R,D,D,D],
+[R,D,R,R,D,D,D,D,D,D,D,D],
+[R,D,R,R,R,R,R,R,R,D,R,R],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,D,R,R,R,D,D,R,R,D,D,R],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,D,D,D,D,D,D,D,D],
+[R,D,R,R,R,D,D,D,D,D,D,R],
+[R,D,D,R,D,D,D,D,D,D,D,D],
+[R,D,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,D,R,R,R,D,D,R,R,R,R,R],
+[R,D,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,R,R,R,R,R,R,R,R],
+[R,R,R,R,R,D,D,D,D,D,D,D],
+[R,R,R,R,R,R,R,R,R,D,D,D],
+[R,R,R,R,D,D,D,D,D,D,D,D],
+[R,D,D,R,D,D,D,R,R,R,R,R],
+[R,D,R,R,D,D,D,D,D,D,D,R],
+[R,R,R,R,R,R,R,R,R,R,R,R]])
 
 # State names
 state_names = [
@@ -116,4 +117,9 @@ state_names = [
 state_electors = [9, 3, 11, 6, 55, 9, 7, 3, 3, 29, 16, 4, 4, 20, 11, 6, 6, 8, 8, 4, 10, 11, 16, 10, 6, 10, 3, 5, 6, 4, 14, 5, 29, 15, 3, 18, 7, 7, 20, 4, 9, 3, 11, 38, 6, 3, 13, 12, 5, 10, 3]
 
 
-state_last_vote = [v[-1] for v in state_history]
+
+state_history = state_history_2016[:,:-1]
+state_vote_2012 = state_history_2016[:,-2]
+state_vote_2016 = state_history_2016[:,-1]
+
+state_last_vote = state_vote_2012 # [v[-1] for v in state_history]
