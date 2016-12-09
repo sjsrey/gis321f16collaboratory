@@ -5,39 +5,16 @@ Here is where we put our core logic to test
 """
 
 
-def lines_in_file(file_name):
-    """
-    Get the lines from a file
-
-    Arguments
-    ---------
-
-    file_name: str
-               full path to file
-
-    Returns
-    -------
-    lines: list
-    """
+def lines_in_file(file_name): # I wrote the counting feature
+    count = 0
     with open(file_name) as f:
         lines = f.readlines()
-    return lines
+    for line in lines: # counts the number of lines in a file
+        count  = count + 1 
+    return count, lines
 
 def get_line(file_name, line_number):
-    """
-    Get a particular line from a file
-
-    Arguments
-    ---------
-    line_number: int
-                 the index of the line to return
-    Returns
-    -------
-    line: str
-          the line at position line_number
-    """
-
-    lines = lines_in_file(file_name)
+    count, lines = lines_in_file(file_name)
     return lines[line_number]
 
 def fields_in_line(line, delim=","):
@@ -57,9 +34,11 @@ def fields_in_line(line, delim=","):
             Sequence of fields separated by delim
     """
 
-    fields = line.strip().split(delim)
+    fields = line.strip().split(delim) # I did not write this method
+    return fields
 
 def n_fields_in_line(line):
+    count = 0
     """
     Find number of fields in a delmited line
 
@@ -73,22 +52,15 @@ def n_fields_in_line(line):
     nf: int
         The number of fields in the string
     """
-    pass
-
+    fields =line.split()
+    for feild in feilds:
+        count = count + 1
+    return count
 def longest_field_in_line(line):
-    """
-    Find the longest field in a line
-
-    Arguments
-    ---------
-
-    line: str
-         A string with delmited fields
-
-    Returns
-    -------
-    field: str
-           The longest field in the delimted line
-
-    """
-    pass
+    answer = 1
+    fields = line.split()
+    for field in fields:
+	lenOfField = len(field)
+	if lenOfField > answer:
+            answer = lenOfFeild
+    return answer
